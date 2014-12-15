@@ -13,9 +13,9 @@ namespace ahorcado
 
 
 
-
+        // vector que contiene las palabra a adivinar
         public static string[] pal = new string[20];
-
+       
         public static void MostrarLetrero()
         {
             string[] Letrero = {
@@ -32,6 +32,7 @@ namespace ahorcado
            "         .888888888. `88888.  8 8888        8  ` 8888     ,88'   8 8888   `8b.     8888     ,88' .888888888. `88888.  8 8888    ,o88P'    ` 8888     ,88'   \n",
            "        .8'       `8. `88888. 8 8888        8     `8888888P'     8 8888     `88.    `8888888P'  .8'       `8. `88888. 8 888888888P'          `8888888P'     \n",
                            };
+            // muestra el titulo ascii
             for (int i = 0; i < Letrero.Length; i++)
             {
                 for (int j = 0; j < Letrero[i].Length; j++)
@@ -56,6 +57,7 @@ namespace ahorcado
         }
         public static string ObtenerPalabra()
         {
+            // este metodo elige una palabra al azar y la devuelve
 
             pal[1] = "hola";
             pal[2] = "ahorcado";
@@ -70,7 +72,8 @@ namespace ahorcado
         }
         public static string OcultarPalabra(string palabra)
         {
-
+               // metodo  que transforma la palabra es asteriscos, y cuenta el numero de caracteres que tiene la palabra
+                    //  y la muestra por pantalla
             string palOculta = "";
             string palAdivinando = "";
 

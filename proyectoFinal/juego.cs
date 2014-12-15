@@ -19,15 +19,19 @@ namespace ahorcado
             string palAdivinando = "";
             int extension;
             int i;
+            
             Logica.MostrarLetrero();
+            
             string palabra = Logica.ObtenerPalabra();
+            
             Logica.OcultarPalabra(palabra);
 
             extension = palabra.Length;
 
-
+            
             int intento = 0;
             palAdivinando = Logica.OcultarPalabra(palabra);
+            
             do
             {
 
@@ -39,11 +43,12 @@ namespace ahorcado
 
 
                 lp = Console.ReadLine()[0];
-
+                // bucle que pide al usuario   que introduzca una letra   y va comparando lo que introduce con la palabra guardada
+                // y va mostrando las letras acertadas, los intentos que te quedan.
                 for (i = 0; i <= extension - 1; i++)
                 {
 
-
+                   
                     le = palabra.Substring(i, 1)[0];
 
                     if (le.Equals(lp))
